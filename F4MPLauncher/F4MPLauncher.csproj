@@ -6,16 +6,12 @@
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
-
+	
   <ItemGroup>
-    <None Remove="background.png" />
-    <None Remove="logotiny.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="background.png" />
-    <Resource Include="logotiny.png" />
-    <Resource Include="Resources\background.png">
+    <Resource Include="Resources\logotiny.png">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Resources\background.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
