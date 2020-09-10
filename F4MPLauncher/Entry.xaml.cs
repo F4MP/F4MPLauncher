@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,7 +17,34 @@ namespace F4MPLauncher
     {
         public Entry()
         {
+            Debug.WriteLine("Entry startup");
+
             InitializeComponent();
         }
+
+        private void Minimise_Click(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Minimising");
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Close");
+            Application.Current.Shutdown();
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            // Allows window to be moved without the titlebars
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+        private void PlayButton_Click(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Playclick");
+        }
+
     }
 }

@@ -13,7 +13,13 @@
 	</Resource>
 	<Resource Include="Resources\background.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+  </Resource>
+  	<Resource Include="Resources\close.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+  </Resource>
+  	<Resource Include="Resources\minimise.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+  </Resource>
   </ItemGroup>
 
 </Project>

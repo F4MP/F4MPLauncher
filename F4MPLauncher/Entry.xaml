@@ -5,7 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:F4MPLauncher"
         mc:Ignorable="d"
-        Height="600" Width="1000" Background="#FF272727" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Height="600" Width="1000" Background="#FF272727" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown">
+
+    <Window.Resources>
+        <Style x:Key="BorderlessButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
 
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
@@ -16,24 +38,44 @@
         </Grid.Background>
         <Image x:Name="Logo" HorizontalAlignment="Left" Height="144" Margin="10,-20,0,0" VerticalAlignment="Top" Width="200" Source="/Resources/logotiny.png" Stretch="Fill" StretchDirection="Both"/>
         <TabControl Margin="10,104,0,0" TabStripPlacement="Left" Opacity="0.5">
-            <TabItem Header="SETTINGS" Background="White" FontFamily="Bahnschrift Condensed" FontWeight="Bold" FontStyle="Italic" FontSize="25" BorderBrush="#FFF5E86F" Foreground="#FF0F0F0F">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="SETTINGS" Background="White" FontFamily="Bahnschrift Condensed" FontSize="25" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <ScrollViewer/>
+                </Grid>
             </TabItem>
-            <TabItem Header="SERVER BROWSER" FontFamily="Bahnschrift Condensed" FontSize="25" FontWeight="Bold">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="SERVER BROWSER" FontFamily="Bahnschrift Condensed" FontSize="25" FontWeight="Bold" Cursor="">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="COMING SOON" HorizontalAlignment="Left" Height="104" Margin="10,10,0,0" VerticalAlignment="Top" Width="384" FontSize="80"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="MODS" FontFamily="Bahnschrift Condensed" FontSize="25" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="COMING SOON" HorizontalAlignment="Left" Height="104" Margin="10,10,0,0" VerticalAlignment="Top" Width="384" FontSize="80"/>
+                </Grid>
             </TabItem>
             <TabItem Header="CHANGELOG" FontFamily="Bahnschrift Condensed" FontSize="25" FontWeight="Bold">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="COMING SOON" HorizontalAlignment="Left" Height="104" Margin="10,10,0,0" VerticalAlignment="Top" Width="384" FontSize="80"/>
+                </Grid>
             </TabItem>
         </TabControl>
-        <Button Content="PLAY" HorizontalAlignment="Left" Height="49" Margin="10,525,0,0" VerticalAlignment="Top" Width="151" Background="#FF3A8DEC" FontFamily="Bahnschrift Condensed" FontSize="48" Foreground="#FFF6E970">
+        <Button Content="PLAY" HorizontalAlignment="Left" Height="49" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="150" Background="#FF3A8DEC" FontFamily="Bahnschrift Condensed" FontSize="48" Foreground="#FFF6E970" Click="PlayButton_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
+        <Button Content="" Margin="940,8,40,0" VerticalAlignment="Top" Width="20" Height="20" BorderThickness="0,0,0,0" Style="{StaticResource BorderlessButton}" Click="Minimise_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources\minimise.png"/>
+            </Button.Background>
+        </Button>
+        <Button Content="" Margin="970,9,10,0" VerticalAlignment="Top" Width="20" Height="20" BorderThickness="0,0,0,0" Style="{StaticResource BorderlessButton}" Click="Close_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources\close.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
-
 
 </Window>

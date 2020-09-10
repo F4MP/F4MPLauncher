@@ -32,7 +32,6 @@ namespace F4MPLauncher
             Entry window = new Entry();
             window.Title = "F4MP Launcher";
             window.Show();
-
         }
     }
 }
