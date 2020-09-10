@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:F4MPLauncher"
         mc:Ignorable="d"
-        Title="Entry" Height="360" Width="250" Background="#FF2E2E2E">
-    <Grid>
+        Height="600" Width="1000" Background="#FF272727" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0" CornerRadius="0" CaptionHeight="0"/>
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/background.png"/>
+        </Grid.Background>
+        <Image x:Name="Logo" HorizontalAlignment="Left" Height="144" Margin="10,-20,0,0" VerticalAlignment="Top" Width="200" Source="/logotiny.png" Stretch="Fill" StretchDirection="Both"/>
+        <TabControl Margin="10,96,10,10" TabStripPlacement="Left">
+            <TabItem Header="TabItem" Background="#FF3A8BE9">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#AAE5E5E5"/>
+            </TabItem>
+        </TabControl>
     </Grid>
+
+
 </Window>

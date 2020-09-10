@@ -12,9 +12,6 @@ using System.Windows.Shapes;
 
 namespace F4MPLauncher
 {
-    /// <summary>
-    /// Interaction logic for Entry.xaml
-    /// </summary>
     public partial class Entry : Window
     {
         public Entry()
