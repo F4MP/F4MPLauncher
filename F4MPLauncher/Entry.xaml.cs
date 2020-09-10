@@ -46,5 +46,10 @@ namespace F4MPLauncher
             Debug.WriteLine("Playclick");
         }
 
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            webBrowser.Navigate("https://f4mp.net");
+            webBrowser.Visibility = Visibility.Visible;
+        }
     }
 }
