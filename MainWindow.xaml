@@ -1,0 +1,17 @@
+﻿<Window x:Class="F4MPLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:F4MPLauncher"
+        mc:Ignorable="d"
+        Title="F4MPLauncher" Height="550" Width="996" ResizeMode="CanMinimize">
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="534" Stroke="Black" VerticalAlignment="Center" Width="996">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Resources/background.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+    </Grid>
+</Window>
