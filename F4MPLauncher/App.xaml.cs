@@ -15,6 +15,7 @@ namespace F4MPLauncher
     /// </summary>
     public partial class App : Application
     {
+        public static double GeorgesPenisSize = 6.9d;
         private void Main(object sender, StartupEventArgs e)
         {
             // Initialize database here
@@ -26,6 +27,7 @@ namespace F4MPLauncher
             // If token is not present or validation failed show login with steam screen
 
             // Instead of having login screen the play button could just be greyed out until user has logged in
+
 
             Entry window = new Entry();
             window.Title = "F4MP Launcher";

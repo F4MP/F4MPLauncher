@@ -15,14 +15,24 @@
             <ImageBrush ImageSource="/Resources/background.png"/>
         </Grid.Background>
         <Image x:Name="Logo" HorizontalAlignment="Left" Height="144" Margin="10,-20,0,0" VerticalAlignment="Top" Width="200" Source="/Resources/logotiny.png" Stretch="Fill" StretchDirection="Both"/>
-        <TabControl Margin="10,96,10,10" TabStripPlacement="Left">
-            <TabItem Header="TabItem" Background="White">
+        <TabControl Margin="10,104,0,0" TabStripPlacement="Left" Opacity="0.5">
+            <TabItem Header="SETTINGS" Background="White" FontFamily="Bahnschrift Condensed" FontWeight="Bold" FontStyle="Italic" FontSize="25" BorderBrush="#FFF5E86F" Foreground="#FF0F0F0F">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="TabItem">
-                <Grid Background="#AAE5E5E5"/>
+            <TabItem Header="SERVER BROWSER" FontFamily="Bahnschrift Condensed" FontSize="25" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="CHANGELOG" FontFamily="Bahnschrift Condensed" FontSize="25" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
+        <Button Content="PLAY" HorizontalAlignment="Left" Height="49" Margin="10,525,0,0" VerticalAlignment="Top" Width="151" Background="#FF3A8DEC" FontFamily="Bahnschrift Condensed" FontSize="48" Foreground="#FFF6E970">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 
 
