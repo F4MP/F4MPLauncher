@@ -37,7 +37,7 @@
             <ImageBrush ImageSource="/Resources/background.png"/>
         </Grid.Background>
         <Image x:Name="Logo" HorizontalAlignment="Left" Height="144" Margin="10,-20,0,0" VerticalAlignment="Top" Width="200" Source="/Resources/logotiny.png" Stretch="Fill" StretchDirection="Both"/>
-        <TabControl Margin="10,104,0,0" TabStripPlacement="Left" Opacity="0.5">
+        <TabControl Margin="10,104,0,0" TabStripPlacement="Left" Opacity="0.5" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="SETTINGS" Background="White" FontFamily="Bahnschrift Condensed" FontSize="25" FontWeight="Bold">
                 <Grid Background="#FFE5E5E5">
                     <Button Content="LOGIN" Background="Black" FontSize="30" Foreground="White" Opacity="1" Style="{StaticResource BorderlessButton}" Margin="10,10,718,432" Click="LoginButton_Click"/>

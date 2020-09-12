@@ -41,6 +41,14 @@ namespace F4MPLauncher
                 this.DragMove();
         }
 
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.Source is TabControl)
+            {
+                webBrowser.Visibility = Visibility.Hidden;
+            }
+        }
+
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
             Debug.WriteLine("Playclick");
@@ -48,8 +56,9 @@ namespace F4MPLauncher
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            webBrowser.Navigate("https://f4mp.net");
+            webBrowser.Navigate("https://cloud.f4mp.net/login/steam");
             webBrowser.Visibility = Visibility.Visible;
         }
+
     }
 }
